@@ -18,7 +18,7 @@ jobs:
           pip install pandas requests
 
       - name: Run BLS script
-        run: API Call.py
+        run: API_Call.py
 
       - name: Commit and push updated CSV
         run: |

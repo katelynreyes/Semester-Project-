@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv(r"C:\Users\katel\bls.csv")
+df = pd.read_csv("data/bls_data.csv")
 
 
 #title page

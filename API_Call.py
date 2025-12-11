@@ -3,6 +3,9 @@
 import requests
 import json
 import pandas as pd
+import os
+
+os.makedirs("data", exist_ok=True) #create directory for exporting the csv
 
 headers = {'Content-type': 'application/json'}
 data = json.dumps({"seriesid": ['CUUR0000SA0L1E','CEU0000000001','CEU0500000003','LNU04000000'],"startyear":"2020", "endyear":"2025"})
@@ -30,4 +33,5 @@ df = pd.DataFrame(rows)
 df['month'] = df['period'].str.replace("M", "", regex=False)
 df['month'] = df['month'].astype(int)
 df['date'] = pd.to_datetime(df["year"].astype(str) + "-" + df["month"].astype(str), format="%Y-%m")
-df
+
+df.to_csv("data/bls_data.csv", index=False)

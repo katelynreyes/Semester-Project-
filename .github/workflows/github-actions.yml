@@ -3,7 +3,8 @@ run-name: BLS Update
 on: 
   schedule:
     - cron: '0 0 1 * *'
-workflow_dispatch:      # Allows manual run
+  workflow_dispatch:      
+
 jobs:
   update-data:
     runs-on: ubuntu-latest

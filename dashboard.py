@@ -3,10 +3,11 @@ import json
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv("data/bls_data.csv")
+#load csv
+df = pd.read_csv("data/final_df.csv")
 
 
-#title page
+#title 
 st.set_page_config(page_title="U.S. Labor Market Dashboard",  layout="wide")  
 st.markdown("<h1 style='text-align: center;'>U.S. Labor Market Dashboard</h1>",unsafe_allow_html=True)  
 st.divider()                

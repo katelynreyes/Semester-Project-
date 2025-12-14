@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 #load csv
-df = pd.read_csv("data/final_df.csv")
+df = pd.read_csv(""data/bls_data.csv")
 
 
 #title 

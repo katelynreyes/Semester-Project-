@@ -69,7 +69,7 @@ st.divider()
 
 
 #Average Wage series
-seriesID = 'LNU04000000'
+seriesID = 'CEU0500000003'
 avgWage = df[df["seriesID"] == seriesID].copy()
 
 # Visualize Average Wage
@@ -89,8 +89,8 @@ with left_column:
     avgWage = avgWage[avgWage["year"].isin(selected_years_wage)]
 
 with right_column:
-    st.header('National Average Hourly Employment, Unadjusted',anchor=None,width="stretch",text_alignment="center")
-    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value (percent)')
+    st.header('Average Hourly Earnings of All Employees, Unadjusted',anchor=None,width="stretch",text_alignment="center")
+    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value ($)')
 
 st.divider()                
 

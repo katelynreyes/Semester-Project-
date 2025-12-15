@@ -90,7 +90,7 @@ with left_column:
 
 with right_column:
     st.header('National Average Hourly Employment, Unadjusted',anchor=None,width="stretch",text_alignment="center")
-    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value, (percent)')
+    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value (percent)')
 
 st.divider()                
 

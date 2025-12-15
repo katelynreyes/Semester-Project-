@@ -37,7 +37,7 @@ with left_column:
 #create chart
 with right_column:
     st.header('Total Nonfarm Employees by Month, Undadjusted', anchor=None, help=None, width="stretch", text_alignment="center")
-    st.line_chart(total_nonfarm, x = 'date', y = 'value (thousands)', x_label = "Date", y_label = 'Value')
+    st.line_chart(total_nonfarm, x = 'date', y = 'value', x_label = "Date", y_label = 'Value (thousands)')
 
 st.divider()                
 
@@ -90,7 +90,7 @@ with left_column:
 
 with right_column:
     st.header('National Average Hourly Employment, Unadjusted',anchor=None,width="stretch",text_alignment="center")
-    st.line_chart(avgWage, x='date', y='value (percent)', x_label="Date", y_label='Value')
+    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value, (percent)')
 
 st.divider()                
 

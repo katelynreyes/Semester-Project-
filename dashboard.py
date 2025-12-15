@@ -36,8 +36,8 @@ with left_column:
 
 #create chart
 with right_column:
-    st.header('Total Nonfarm Employees by Month', anchor=None, help=None, width="stretch", text_alignment="center")
-    st.line_chart(total_nonfarm, x = 'date', y = 'value', x_label = "Date", y_label = 'Value')
+    st.header('Total Nonfarm Employees by Month, Undadjusted', anchor=None, help=None, width="stretch", text_alignment="center")
+    st.line_chart(total_nonfarm, x = 'date', y = 'value (thousands)', x_label = "Date", y_label = 'Value')
 
 st.divider()                
 
@@ -62,8 +62,8 @@ with left_column:
     unemployment = unemployment[unemployment["year"].isin(selected_years_unemp)]
 
 with right_column:
-    st.header('Total National Unemployment by Month', anchor=None, width="stretch",text_alignment="center")
-    st.line_chart(unemployment, x='date', y='value', x_label="Date", y_label='Value')
+    st.header('Total National Unemployment by Month, Unadjusted', anchor=None, width="stretch",text_alignment="center")
+    st.line_chart(unemployment, x='date', y='value', x_label="Date", y_label='Value (percent)')
 
 st.divider()                
 
@@ -89,8 +89,8 @@ with left_column:
     avgWage = avgWage[avgWage["year"].isin(selected_years_wage)]
 
 with right_column:
-    st.header('National Average Hourly Employment',anchor=None,width="stretch",text_alignment="center")
-    st.line_chart(avgWage, x='date', y='value', x_label="Date", y_label='Value')
+    st.header('National Average Hourly Employment, Unadjusted',anchor=None,width="stretch",text_alignment="center")
+    st.line_chart(avgWage, x='date', y='value (percent)', x_label="Date", y_label='Value')
 
 st.divider()                
 
@@ -115,5 +115,5 @@ with left_column:
     CPI = CPI[CPI["year"].isin(selected_years_cpi)]
 
 with right_column:
-    st.header('All items less food and energy in U.S. city average, all urban consumers, not seasonally adjusted',anchor=None,width="stretch",text_alignment="center")
+    st.header('Consumer Price Index. All items less food and energy in U.S. city average, all urban consumers, not seasonally adjusted',anchor=None,width="stretch",text_alignment="center")
     st.line_chart(CPI, x='date', y='value', x_label="Date", y_label='Value')
